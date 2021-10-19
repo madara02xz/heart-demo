@@ -1,67 +1,58 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
 }
-body{
-	background-color: #0b1522;
 
+body {
+    background-color: #0b1522;
 }
+
 .heart {
-	background-color: red;
-	display: inline-block;
-	height: 50px;
-	margin: 0 10px;
-	position: relative;
-	top: 0;
-	transform: rotate(-45deg);
-	position: absolute;
-	left: 45%;
-	top: 45%;
-	width: 50px;
-	animation: heartbeat 1s infinite;
-	box-shadow:20px 5px 10px  5px rgb(255, 107, 114);
-	
-
+    background-color: red;
+    display: inline-block;
+    height: 50px;
+    margin: 0 10px;
+    position: relative;
+    top: 0;
+    transform: rotate(-45deg);
+    position: absolute;
+    left: 45%;
+    top: 45%;
+    width: 50px;
+    animation: heartbeat linear 1s infinite;
+    box-shadow: 20px 5px 10px 5px rgb(255, 107, 114);
 }
+
 .heart:before,
 .heart:after {
-	content: "";
-	background-color: red;
-	border-radius: 50%;
-	height: 50px;
-	position: absolute;
-	width: 50px;
-	box-shadow:20px 5px  5px rgb(255, 107, 114);
-	
-
+    content: "";
+    background-color: red;
+    border-radius: 50%;
+    height: 50px;
+    position: absolute;
+    width: 50px;
+    box-shadow: 20px 5px 5px rgb(255, 107, 114);
 }
+
 .heart:before {
-	top: -25px;
-	left: 0;
-
+    top: -25px;
+    left: 0;
 }
-.heart:after {
-	left: 25px;
-	top: 0;
 
+.heart:after {
+    left: 25px;
+    top: 0;
 }
 
 @keyframes heartbeat {
-0% {
-	transform: rotate(-45deg) scale(1);
-	
-}
-20% {
-	transform: rotate(-45deg) scale(1.25)
-	translateX(5%) 
-	translateY(5%);
-	
-}
-40% {
-	transform: rotate(-45deg) scale(1.5)
-	translateX(9%) 
-	translateY(10%);
-}
+    0% {
+        transform: rotate(-45deg) scale(1);
+    }
+    20% {
+        transform: rotate(-45deg) scale(1.25) translateX(5%) translateY(5%);
+    }
+    40% {
+        transform: rotate(-45deg) scale(1.5) translateX(9%) translateY(10%);
+    }
 }
